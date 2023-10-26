@@ -1,0 +1,3 @@
+name = Bingle's Animation System
+author = Bingle
+description = Hey!!!! STop HAVING THIS MOD!!! its not FINISHED YET!! RAAHHHHHH

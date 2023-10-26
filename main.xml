@@ -1,0 +1,104 @@
+<scene version="1.4.0" shadowVolume="15 7 15">
+	<group name="basics">
+		<environment template="night" skyboxbrightness="0" fogParams="0 0 0 0"/>
+		<script pos="0.0 0.2 0.0" file="main.lua"/>
+		<script pos="0.0 0.2 0.0" file="sandbox.lua"/>
+		<voxbox tags="unbreakable" pos="-15.0 -1.0 -15.0" rot="0.0 0.0 0.0" size="300 10 300" brush="MOD/vox/ground.vox" offset="10"/>
+		<spawnpoint pos="0.0 1.0 5.1" rot="0.0 -180.0 0.0"/>
+	</group>
+	<script pos="0.1 0.3 -0.1" file="MOD/BAS/BAS.lua">
+		<group name="instance=MOD/test/template_ragdoll.xml" pos="-0.1 -0.3 0.2" rot="0.0 0.0 0.0">
+			<group pos="0.0 0.8 0.0">
+				<body tags="ragdoll=body reference" pos="0.05 0.4 0.0" dynamic="true">
+					<vox pos="-0.05 -0.4 0.0" file="MOD/test/ragdoll.vox" object="body"/>
+				</body>
+			</group>
+			<group pos="0.1 0.0 0.0">
+				<body tags="ragdoll=Leg_R" pos="-0.2 0.9 0.0" rot="180.0 0.0 0.0" dynamic="true">
+					<vox pos="-0.0 0.4 0.0" rot="180.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="Leg_R"/>
+					<joint collide="true"/>
+				</body>
+				<body tags="ragdoll=foot_R" pos="-0.2 0.6 0.0" rot="180.0 0.0 0.0" dynamic="true">
+					<vox pos="0.0 0.6 -0.1" rot="180.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="foot_R"/>
+					<joint pos="0.0 -0.0 0.0" collide="true"/>
+				</body>
+				<body tags="ragdoll=Leg_L" pos="0.1 0.9 0.0" rot="180.0 0.0 0.0" dynamic="true">
+					<vox pos="0.0 0.4 0.0" rot="180.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="Leg_L"/>
+					<joint collide="true"/>
+				</body>
+				<body tags="ragdoll=foot_L" pos="0.1 0.6 0.0" rot="180.0 0.0 0.0" dynamic="true">
+					<vox pos="0.0 0.6 -0.1" rot="180.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="foot_L"/>
+					<joint pos="0.0 -0.0 0.0" collide="true"/>
+				</body>
+			</group>
+			<group pos="0.0 1.5 0.0">
+				<body tags="ragdoll=head" pos="0.05 0.0 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="-0.05 0.0 -0.05" rot="0.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="head"/>
+					<voxbox pos="-0.05 0.1 0.15" rot="0.0 180.0 0.0" size="1 1 1" color="0 0 0"/>
+					<voxbox pos="0.15 0.1 0.15" rot="0.0 180.0 0.0" size="1 1 1" color="0 0 0"/>
+					<joint pos="0.0 0.0 0.0" rot="0.0 180.0 0.0" collide="true"/>
+				</body>
+				<body tags="ragdoll=jaw" pos="0.05 0.1 -0.15" rot="90.0 0.0 0.0" dynamic="true">
+					<vox pos="-0.05 0.2 0.1" rot="-90.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="jaw"/>
+					<joint size="0.15" collide="true"/>
+				</body>
+			</group>
+			<group pos="0.1 0.7 0.0">
+				<body tags="ragdoll=Uarm_R" pos="-0.3 0.7 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="-0.1 -0.3 0.0" rot="0.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="Uarm_R"/>
+					<joint pos="0.0 0.0 0.0" collide="true"/>
+				</body>
+				<body tags="ragdoll=larm_R" pos="-0.4 0.4 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="larm_R"/>
+					<joint collide="true"/>
+				</body>
+				<body tags="ragdoll=Uarm_L" pos="0.2 0.7 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.1 -0.3 0.0" rot="0.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="Uarm_L"/>
+					<joint pos="-0.0 0.0 0.0" collide="true"/>
+				</body>
+				<body tags="ragdoll=larm_L" pos="0.3 0.4 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" file="MOD/test/ragdoll.vox" object="larm_L"/>
+					<joint collide="true"/>
+				</body>
+			</group>
+		</group>
+		<body tags="ragdoll=Suzanne independent" pos="-0.88 0.19 -3.28" rot="-125.0 20.0 0.0" dynamic="true">
+			<vox tags="invisible" pos="0.0 0.0 0.0" rot="180.0 0.0 0.0" file="MOD/vox/Suzanne.vox" color="1 1 1 0.5">
+				<vox pos="0.0 -0.0 -0.0" rot="0.0 0.0 0.0" file="MOD/vox/Suzanne2.vox" scale="0.1"/>
+			</vox>
+		</body>
+	</script>
+	<group name="furniture" pos="0.0 0.1 -0.6">
+		<vox pos="0.0 -0.1 0.2" rot="0.0 0.0 0.0" prop="true" file="MOD/vox/livingroom_oldie.vox" object="armchair"/>
+		<vox pos="1.8 -0.1 0.5" rot="0.0 100.0 0.0" prop="true" file="MOD/vox/livingroom_oldie.vox" object="table_1">
+			<vox pos="0.0 0.8 0.0" rot="0.0 0.0 0.0" prop="true" file="MOD/vox/livingroom_oldie.vox" object="lamp_2">
+				<light pos="0.05 0.85 -0.05" color="1.0 0.87 0.66" size="0.2" unshadowed="0.3"/>
+			</vox>
+		</vox>
+	</group>
+	<group name="Lights" pos="1.3 0.0 -3.0">
+		<group name="Small Light" pos="-5.3 1.0 -1.0" rot="0.0 15.0 0.0">
+			<voxbox pos="-1.0 -1.0 -1.0" rot="0.0 0.0 0.0" prop="true" size="20 20 20">
+				<voxbox pos="0.1 0.1 1.9" rot="0.0 0.0 0.0" size="18 18 1" brush="hole" color="1.0 0.0 0.0"/>
+				<voxbox pos="0.1 0.1 1.8" rot="0.0 0.0 0.0" size="18 18 1" material="glass" color="0.13 1.00 0.17" pbr="0 0 0 6">
+					<light pos="0.9 0.9 0.1" type="area" color="0.45 0.88 0.3" scale="3.75" size="1.8 1.8" fogscale="0"/>
+				</voxbox>
+			</voxbox>
+		</group>
+		<group name="Big Light" pos="3.7 3.0 -4.0" rot="0.0 -35.0 0.0">
+			<voxbox pos="-2.0 -3.0 -2.0" prop="true" size="40 60 40">
+				<voxbox pos="0.1 0.1 3.9" rot="0.0 0.0 0.0" size="38 58 1" brush="hole" color="1.0 0.0 0.0"/>
+				<voxbox pos="0.1 0.1 3.8" rot="0.0 0.0 0.0" size="38 58 1" material="glass" color="0.94 0.06 1.00" pbr="0 0 0 14">
+					<light pos="1.9 2.9 0.1" type="area" color="0.78 0.05 0.88" scale="9.95" size="3.8 5.8" fogscale="0"/>
+				</voxbox>
+			</voxbox>
+		</group>
+		<light pos="3.93 1.12 10.75" scale="10.00" fogscale="0"/>
+		<light pos="0.4 7.49 -10.76" scale="10.00" fogscale="0"/>
+	</group>
+	<rope pos="0.05 0.0 0.1">
+		<location pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+		<location pos="0.0 1.2 0.0" rot="0.0 0.0 0.0"/>
+	</rope>
+</scene>
+

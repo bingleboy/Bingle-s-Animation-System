@@ -1,0 +1,80 @@
+# BAS: NOTES
+*Bingle's Animation System*
+
+---
+
+Structure of export file is as follows:
+
+- Objects
+	- Object
+		- Property
+			- Keyframe
+				- Time
+				- Value
+	- Armature
+		- Name
+		- Root node
+		- Animations
+			- `main` - default animation
+				- property
+					- keyframe
+						- time
+						- value
+			- `walk` - secondary animations, etc.
+- Markers
+	- Individual markers
+		- Time
+		- Name
+		- Bound Camera (where applicable)
+
+note that Objects **DO NOT** Support nonlinear animation!! For the context of this system, nonlinear animation refers to the ability for an armature to have multiple associated animations.
+
+- Nonlinear - **Any animation or data that does not play during the duration of the animation from start to end.**
+
+---
+
+## Plans
+
+This system is planned to have support for animation of physical objects, characters, sounds, locations, cameras, etc. along with custom properties defined in blender. It will be usable to create entire cutscenes, or to export a series of nonlinear armature animations.
+
+---
+
+## TODO:
+
+#### General/Requests
+
+- <s>Write a todo list</s>
+- Make this document look nicer
+- Lots of rubber ducking
+- Sleep more
+
+######
+
+- Get it working with Mixamo for CaptainBear
+- Make it do a fortnite dance for LegitNub
+- Add speaker support for LethalHotCocoa
+- More efficient export filesize for that one guy i forgot their name sorry
+- Get some goddamn SLEEP for me
+
+#### Exporter/Blender
+
+- Add armature support to exporter
+- Rename bones better
+- Better custom property support (for different datatypes?)
+- Blender UI panel instead of a bunch of variables and the run button
+
+#### Importer/Lua Framework
+
+- Add armature support to importer
+- Worry about structure of animation interpreter code
+- Possibly organize objects into a tree structure? hmm...
+
+#### Both
+
+- Armature/object custom properties for max relative velocity, max force, local/global rot, etc.
+
+---
+
+*This file is intended to be viewed with a markdown viewer! I personally use **MarkdownViewer++** with **notepad++**, but it's up to you what you use.*
+
+Notice how both items on the todo list related to sleep are not checked off? Yeah, programming is so fun

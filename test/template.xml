@@ -1,0 +1,45 @@
+<prefab version="1">
+	<group prop0="file=MOD/player1/template.vox" prop1="tags=player nocull" prop3="collide=false">
+		<group pos='0 1 0'>
+			<body tags='playerBody_torso=1 player SteamId=none' pos='0.05 0.8 0' dynamic='true'>
+				<vox pos='-0.05 -0.8 0' object='body'/>
+			</body>
+		</group>
+		<group pos='0.1 0.2 0'>
+			<body tags='playerBody_right_leg_top=1 player SteamId=none' pos='-0.2 0.9 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.4 0' rot='0 -180 0' object='Leg_R'/>
+			</body>
+			<body tags='playerBody_right_leg_bot=1 player SteamId=none' pos='-0.2 0.5 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.5 -0.1' rot='0 180 0' object='foot_R'/>
+			</body>
+			<body tags='playerBody_left_leg_top=1 player SteamId=none' pos='0.1 0.9 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.4 0' rot='0 180 0' object='Leg_L'/>
+			</body>
+			<body tags='playerBody_left_leg_bot=1 player SteamId=none' pos='0.1 0.5 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.5 -0.1' rot='0 -180 0' object='foot_L'/>
+			</body>
+		</group>
+		<group pos='0 1.7 0'>
+			<body tags='playerBody_head=1 player SteamId=none' pos='0.05 0.1 -0.05' rot='0 -180 0' dynamic='true'>
+				<vox pos='0.05 -0.1 -0' rot='0 -180 0' object='head'/>
+				<vox pos='0.05 -0.1 -0.1' rot='0 -180 0' object='jaw'/>
+				<voxbox pos='0.05 0 -0.2' size='1 1 1' color='0 0 0'/>
+				<voxbox pos='-0.15 0 -0.2' size='1 1 1' color='0 0 0'/>
+			</body>
+		</group>
+		<group pos='0.1 0.9 0'>
+			<body tags='playerBody_right_arm_top=1 player SteamId=none' pos='-0.4 0.7 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.3 0' rot='0 180 0' object='Uarm_R'/>
+			</body>
+			<body tags='playerBody_right_arm_bot=1 player SteamId=none' pos='-0.4 0.4 0' rot='0 180 0' dynamic='true'>
+				<vox pos='0 -0.4 0' rot='0 180 0' object='larm_R'/>
+			</body>
+			<body tags='playerBody_left_arm_top=1 player SteamId=none' pos='0.3 0.7 0' rot='0 180 0' dynamic='true'>
+				<vox pos='-0 -0.3 0' rot='0 180 0' object='Uarm_L'/>
+			</body>
+			<body tags='playerBody_left_arm_bot=1 player SteamId=none' pos='0.3 0.4 0' rot='0 180 0' dynamic='true'>
+				<vox pos='-0 -0.4 0' rot='0 180 0' object='larm_L'/>
+			</body>
+		</group>
+	</group>
+</prefab>
